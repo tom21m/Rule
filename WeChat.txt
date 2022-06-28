@@ -1,4 +1,0 @@
-USER-AGENT,MicroMessenger
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,wechat.com
-DOMAIN-SUFFIX,qlogo.cn
