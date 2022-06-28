@@ -1,3 +1,17 @@
+
+USER-AGENT *com.apple.mobileme.fmip1
+USER-AGENT *WeatherFoundation*
+USER-AGENT %E5%9C%B0%E5%9B%BE*
+USER-AGENT %E8%AE%BE%E7%BD%AE*
+USER-AGENT com.apple.geod*
+USER-AGENT com.apple.Maps
+USER-AGENT FindMyFriends*
+USER-AGENT FindMyiPhone*
+USER-AGENT FMDClient*
+USER-AGENT FMFD*
+USER-AGENT fmflocatord*
+USER-AGENT geod*
+USER-AGENT locationd*
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
@@ -11,6 +25,7 @@ DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX push-apple.com.akadns.net
 DOMAIN-KEYWORD,apple.com.akadns.net
 DOMAIN-KEYWORD,icloud.com.akadns.net
 IP-CIDR,17.0.0.0/8,no-resolve
