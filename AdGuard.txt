@@ -1,5 +1,5 @@
 !intervals
-intervals.icu###app > div.v-dialog__content
+intervals.icu##.v-dialog--active
 !cyclingchina
 cyclingchina.net##.mobileAD
 cyclingchina.net##.webAD
