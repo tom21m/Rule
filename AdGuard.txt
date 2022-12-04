@@ -1,3 +1,5 @@
 !cyclingchina
 cyclingchina.net##div.mobileAD
 cyclingchina.net##div.webAD
+!馒头
+@@||kp.m-team.cc^$stealth=ip
