@@ -1,5 +1,3 @@
-!intervals
-intervals.icu##div.v-dialog--active
 !cyclingchina
 cyclingchina.net##div.mobileAD
 cyclingchina.net##div.webAD
