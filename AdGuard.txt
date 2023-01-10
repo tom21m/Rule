@@ -6,5 +6,5 @@ cyclingchina.net##.webAD
 !V2ex
 v2ex.com##.wwads-cn
 !知乎
-zhihu.com##.Modal-wrapper.undefined.Modal-enter-done
+!zhihu.com##.Modal-wrapper.undefined.Modal-enter-done
 zhuanlan.zhihu.com##div:nth-child(24) > div > div > div.Modal-wrapper.undefined.Modal-enter-done
