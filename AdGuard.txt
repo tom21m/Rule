@@ -6,5 +6,4 @@ cyclingchina.net##.webAD
 !V2ex
 v2ex.com##.wwads-cn
 !知乎
-Modal-wrapper
-zhihu.com##.Modal-wrapper
+zhihu.com##.Modal-wrapper.undefined.Modal-enter-done
