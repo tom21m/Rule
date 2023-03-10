@@ -8,4 +8,4 @@ v2ex.com##.wwads-cn
 !知乎
 zhuanlan.zhihu.com##div:nth-child(24) > div > div > div.Modal-wrapper.undefined.Modal-enter-done
 !OpenAI
-@@||chat.openai.com/cdn-cgi/images/trace/managed/js/transparent.gif?ray=7a59e21cfa9f25fc$domain=chat.openai.com
+@@||challenges.cloudflare.com^$stealth=ip
