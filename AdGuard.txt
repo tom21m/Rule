@@ -14,3 +14,4 @@ zhuanlan.zhihu.com##div:nth-child(24) > div > div > div.Modal-wrapper.undefined.
 @@||chat.openai.com/cdn-cgi/challenge-platform/$domain=chat.openai.com
 !飞书
 @@||feishu.cn^$stealth=ip
+@@||xwwspiq4rb.feishu.cn^$stealth=ip
