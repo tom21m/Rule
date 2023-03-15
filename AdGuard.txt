@@ -12,3 +12,5 @@ zhuanlan.zhihu.com##div:nth-child(24) > div > div > div.Modal-wrapper.undefined.
 @@||challenges.cloudflare.com^$stealth=ip
 @@||chat.openai.com/cdn-cgi/images/$domain=chat.openai.com
 @@||chat.openai.com/cdn-cgi/challenge-platform/$domain=chat.openai.com
+!飞书
+@@||feishu.cn^$stealth=ip
