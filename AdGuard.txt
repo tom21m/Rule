@@ -14,5 +14,3 @@ zhuanlan.zhihu.com##div:nth-child(24) > div > div > div.Modal-wrapper.undefined.
 @@||chat.openai.com/cdn-cgi/images/$domain=chat.openai.com
 @@||chat.openai.com/cdn-cgi/challenge-platform/$domain=chat.openai.com
 !飞书
-@@||mcs-bd.feishu.cn/v1/list$domain=dmh.feishu.cn
-@@||dmh.feishu.cn/$domain=dmh.feishu.cn
