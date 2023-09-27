@@ -1,0 +1,332 @@
+# Google
+.google-analytics.com
+.googleadservices.com
+.growth-pa.googleapis.com
+.people-pa.googleapis.com
+.suggestqueries.google.com
+.safebrowsing.googleapis.com
+
+# Microsoft
+.cdp.microsoft.com
+.wpad.tomgaoge.com
+.settings-win.data.microsoft.com
+.telemetry.microsoft.com
+.events.data.microsoft.com
+
+# Microsoft NCSI
+.msftncsi.com
+.dns.msftncsi.com
+.msftconnecttest.com
+
+# 腾讯
+.log.weixin.qq.com
+.tudg.qq.com
+.bugly.qq.com
+.ilivelog.qcloud.com
+
+# 京东
+.mars.jd.com
+.sh.jd.com
+.cc.m.jd.com
+.homepage-gw.jd.com
+.firevent.jd.com
+.fireactive.jd.com
+.perf.m.jd.com
+.dns.jd.com
+.jddebug.com
+
+# V2ex
+i.v2ex.com
+cdn.v2ex.com
+static.v2ex.com
+
+# 中国移动
+.config.cmpassport.com
+.www.cmpassport.com
+.wap.cmpassport.com
+.onekey1.cmpassport.com
+.log1.cmpassport.com
+.smsks1.cmpassport.com
+.verify.cmpassport.com
+
+# 中国联通
+.opencloud.wostore.cn
+.auth.wosms.cn
+.id.mail.wo.cn
+.mdn.open.wo.cn
+.hmrz.wo.cn
+.nishub1.10010.com
+.enrichgw.10010.com
+
+# 中国电信
+.id6.me
+.open.e.189.cn
+
+# 小米
+.app.chat.global.xiaomi.net
+.ad.intl.xiaomi.com
+.ad.xiaomi.com
+.api.setting.intl.miui.com
+.market.xiaomi.com
+.resolver.msg.global.xiaomi.net
+.xmpush.global.xiaomi.com
+.micloud.xiaomi.net
+.zhuti.intl.xiaomi.com
+.data.mistat.intl.xiaomi.com
+.ad.intl.xiaomi.com
+.app.chat.global.xiaomi.net
+.tracking.intl.miui.com
+.api.miwifi.com
+
+# 友盟
+.umeng.com
+.umengcloud.com
+.um0.cn
+.um1.cn
+.umsns.com
+.umtrack.com
+.umtrack0.com
+.umtrack1.com
+.umtrack2.com
+.umv0.com
+.umv5.com
+.wrating.com
+.dratio.com
+
+# 北京热云科技有限公司.20201123
+.adinsights.cn
+.adprodesk.com
+.adsdesk.cn
+.appsio.cn
+.arppu.cn
+.gamestarapp.com
+.hotssp.com
+.hotssp.net
+.initdata.cn
+.jianren.club
+.mdpplus.com
+.mobunion.cn
+.reyun.com
+.ryuid.com
+.ryuid1.com
+.ryuid2.com
+.tkioglobal.cn
+.trackingio.com
+.uri6.com
+.userdesk.cn
+
+# 中国信息通信研究院.20201123
+.5gaia.org.cn
+.5gcga.org.cn
+.5gii-appstore.com
+.aibest.org.cn
+.aiec-alliance.com
+.aii-alliance.org
+.aii-pgpc.com
+.aimednet.com
+.apca.org.cn
+.appstore5g.cn
+.bbmap.cn
+.bbums.cn
+.bbums.org.cn
+.caicp.org.cn
+.caict.ac
+
+# 北京数字联盟网络科技有限公司
+.shuzilm.cn
+.cnadid.com
+.mobid.cn
+.cnadid.cn
+.shuzilm.com
+.kxid.cn
+.shuzhundsj.cn
+.digitalunion.cn
+
+# 北京数字精准广告有限公司
+.shuzijz.cn
+
+# 北京数美时代科技有限公司
+.ishumei.com
+.fengkongcloud.com
+.fengkongcloud.cn
+.fengkongbao.com
+
+# 北京勾正数据科技有限公司
+.gz-data.com
+.gozendata.com
+.gzads.com
+
+# 北京建恒信安科技有限公司
+.jhsec.com
+
+# 北京易科势腾科技股份有限公司
+.iecosystem.com.cn
+.marsflag.com.cn
+
+# 千城智联（上海）网络科技有限公司
+.shadt.com
+.chinashadt.com
+.hongselianmeng.com
+.hongselianmeng.cn
+.qianyuyoupin.com
+.hslmbuy.com
+.hslmshop.com
+.hslmtv.com
+.tvlianmeng.com
+.hslmnews.com
+.qianchengyoupin.com
+
+# 深圳木星网络科技有限公司
+.muxingnet.com
+.upmuxing.top
+
+# 杭州悦时网络科技有限公司
+.yueshiwl.com
+.jzbill.com
+.yuebeicapital.com
+
+# 厦门学树网络科技有限公司
+.habitree.cn
+
+# 上海扇意网络科技有限公司
+.zhuankemiao.com
+.huojianaso.com
+
+# 珠海市卓轩科技有限公司
+.wakedata.com
+.wakedata.cn
+.wakecloud.com
+
+# 北京林克艾普科技有限公司
+.linkip.cn
+
+# 北京世鼎科技发展有限公司
+.cinding.com
+
+# 北京人人云图信息技术有限公司
+.aograph.com
+
+# 新流大数据科技（厦门）有限公司
+.nflow.cn
+
+# 翼果（深圳）科技有限公司
+.touchdata.io
+.yiguotech.com
+.touchservice.cn
+
+# 深圳市中科新业信息科技发展有限公司
+.seentech.com.cn
+.seencenter.cn
+
+# 北京东方网信科技股份有限公司
+.net-east.com
+
+# 广州韵成通信科技有限公司
+.techyc.com
+
+# 厦门正北科技有限公司
+.yihao.tech
+
+# 上海评驾科技有限公司
+.chinaubi.com
+.chinaubi.com.cn
+.riskchinaubi.com
+.jpcore.cn
+
+# 杭州多准数据技术有限公司
+.duozhun.cc
+.x-target.cn
+
+# 神策网络科技（北京）有限公司
+.sensorsdata.cn
+.sensorsdata.com
+.sensorsanalytics.cn
+.sensorsanalytics.com
+.sensorsdatavip.com
+.sensorsdata.cloud
+
+# 中科腾远（北京）科技有限公司
+.zkty.org
+
+# 汇纳科技股份有限公司
+.winnerinf.com
+.ipva.cn
+.winneryun.com
+.winneryun.cn
+.zkycloud.com
+
+# 酷比客股份有限公司
+.clipick.com
+
+# P2P 缀初网络技术（上海）有限公司
+.thefirstchain.com
+.ppio.cn
+.ppio.cloud
+.painet.work
+.paigod.work
+.ppio.net.cn
+
+# 北京巨量引擎网络技术有限公司
+.byteadimg.com
+.byteadvod.com
+.bytefint.com
+.bytesfield-b.com
+.bytesfield.com
+.bytesmanager-b.com
+.bytesmanager.com
+.creativityeco.com
+.csjplatform-img.com
+.csjplatform-static.com
+.csjplatform.com
+.cussea.com
+.datahub-cn-pre.com
+.datahubtrack.com
+.growth-activity01.com
+.growth-activity02.com
+.growth-activity03.com
+.juliangyinqing.com
+.juliangyinqing.com
+.juliangyinqing.com
+.oceancus.com
+.oceanengine.com
+.oceanengine.com
+.oe-appstore.com
+.pangle.cn
+.pangolin-dsp-toutiao-b.com
+.pangolin-dsp-toutiao.com
+.pangolin-sdk-toutiao-b.com
+.pangolin-sdk-toutiao.com
+.pangolin-sdk-toutiao0-b.com
+.pangolin-sdk-toutiao0.com
+.pangolin-sdk-toutiao1-b.com
+.pangolin-sdk-toutiao1.com
+.pangolin-sdk-toutiao2-b.com
+.pangolin-sdk-toutiao2.com
+.pangolin-sdk-toutiao3-b.com
+.pangolin-sdk-toutiao3.com
+.pangolin-sdk-toutiao4-b.com
+.pangolin-sdk-toutiao4.com
+.panplayable-toutiao-b.com
+.panplayable-toutiao.com
+.pglstatp-toutiao-b.com
+.pglstatp-toutiao.com
+
+# 什么值得买
+.127.net
+.dr.netease.im
+.analytics-api.smzdm.com
+.logs-api.smzdm.com
+
+# Stripe
+.m.stripe.network
+.m.stripe.com
+.q.stripe.com
+
+# 知乎
+.appcloud2.in.zhihu.com
+.mqtt.zhihu.com
+.sugar.zhihu.com
+
+# 飞书
+.queniusz.com
+.rtc-log-report.bytedance.com
