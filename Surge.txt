@@ -25,7 +25,7 @@
 .ilivelog.qcloud.com
 
 # 京东
-.mars.jd.com
+#.mars.jd.com
 .sh.jd.com
 .cc.m.jd.com
 .homepage-gw.jd.com
