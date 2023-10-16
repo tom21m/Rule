@@ -330,3 +330,9 @@ static.v2ex.com
 # 飞书
 .queniusz.com
 .rtc-log-report.bytedance.com
+
+#反诈
+.miav-cse.avlyun.com
+.a0.app.xiaomi.com
+.miui-fxcse.avlyun.com
+.api.installer.xiaomi.com
