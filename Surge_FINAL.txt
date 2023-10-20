@@ -4,7 +4,3 @@
 # cnBeta
 .cnbeta.com.tw
 .cnbetacdn.com
-
-,,
-
-,,,
