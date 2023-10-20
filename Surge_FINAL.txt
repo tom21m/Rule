@@ -1,4 +1,6 @@
 # BlockChain
 .bsc-dataseed1.binance.org
+
 # cnBeta
 .cnbeta.com.tw
+.cnbetacdn.com
