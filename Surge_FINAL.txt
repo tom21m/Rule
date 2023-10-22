@@ -5,4 +5,8 @@
 .cnbeta.com.tw
 .cnbetacdn.com
 
+<<<<<<< HEAD
 # 1
+=======
+# Test
+>>>>>>> ec099d76de3212ecf7f3ec57bffe51713d17f2a2
