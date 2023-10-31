@@ -1,16 +1,1 @@
-!cyclingchina
-cyclingchina.net##.mobileAD
-cyclingchina.net##.webAD
-!馒头
-!@@||kp.m-team.cc^$stealth=ip
-!V2ex
-v2ex.com##.wwads-cn
-!知乎
-zhuanlan.zhihu.com##div:nth-child(24) > div > div > div.Modal-wrapper.undefined.Modal-enter-done
-!OpenAI
-@@||chat.openai.com^$stealth=ip
-@@||platform.openai.com^$stealth=ip
-@@||challenges.cloudflare.com^$stealth=ip
-@@||chat.openai.com/cdn-cgi/images/$domain=chat.openai.com
-@@||chat.openai.com/cdn-cgi/challenge-platform/$domain=chat.openai.com
-!飞书
+! Test
