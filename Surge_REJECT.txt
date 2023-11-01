@@ -340,3 +340,10 @@ static.v2ex.com
 # GXBMONITOR
 .bbums.cn
 .bbums.org.cn
+
+# 任子行
+.1218.com.cn 
+.surfilter.com 
+.rzxrz.com 
+.wx1218.com 
+.gdcmccportal.cn
