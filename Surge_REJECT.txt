@@ -336,3 +336,7 @@ static.v2ex.com
 .a0.app.xiaomi.com
 .miui-fxcse.avlyun.com
 .api.installer.xiaomi.com
+
+# GXBMONITOR
+.bbums.cn
+.bbums.org.cn
