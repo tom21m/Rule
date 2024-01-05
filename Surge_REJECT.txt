@@ -23,6 +23,7 @@
 .tudg.qq.com
 .bugly.qq.com
 .ilivelog.qcloud.com
+.szreport.weixin.qq.com
 
 # 京东
 #.mars.jd.com
