@@ -1,1 +1,2 @@
 @@||pancakeswap.finance^$stealth=useragent
+@@||api.flow.microsoft.com^$stealth=3p-auth
