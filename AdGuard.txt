@@ -1,2 +1,8 @@
 @@||pancakeswap.finance^$stealth=useragent
+@@||webshell.suite.office.com^$stealth=3p-auth
+@@||admin.microsoft.com^$stealth=3p-auth
 @@||api.flow.microsoft.com^$stealth=3p-auth
+@@||api.bap.microsoft.com^$stealth=3p-auth
+@@||asia.api.powerapps.com^$stealth=3p-auth
+@@||dynamics.com^$stealth=3p-auth
+@@||azure-apim.net^$stealth=3p-auth
