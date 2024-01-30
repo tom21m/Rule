@@ -1,1 +1,2 @@
 @@||pancakeswap.finance^$stealth=useragent
+@@||world.ces.microsoftcloud.com^$stealth=useragent
