@@ -348,3 +348,6 @@ static.v2ex.com
 .rzxrz.com 
 .wx1218.com 
 .gdcmccportal.cn
+
+#百词斩
+.advertise.bczeducation.cn
