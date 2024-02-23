@@ -62,6 +62,7 @@ static.v2ex.com
 # 中国电信
 .id6.me
 .open.e.189.cn
+.message.189cube.com
 
 # 小米
 .app.chat.global.xiaomi.net
