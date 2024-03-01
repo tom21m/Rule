@@ -352,3 +352,6 @@ static.v2ex.com
 
 #百词斩
 .advertise.bczeducation.cn
+
+#AlDente
+.paddleapi.com
