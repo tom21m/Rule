@@ -355,3 +355,6 @@ static.v2ex.com
 
 #AlDente
 .paddleapi.com
+
+#B站关联 上海灵羊文化传播有限公司
+.hdslb.com
