@@ -1,8 +1,4 @@
-# BlockChain
-.bsc-dataseed1.binance.org
-
-# cnBeta
+.binance.org
 .cnbeta.com.tw
 .cnbetacdn.com
-
-# Roblox
+.v2ex.com
