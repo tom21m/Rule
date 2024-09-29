@@ -1,3 +1,6 @@
+# Apple
+.safebrowsing.apple
+
 # Google
 .google-analytics.com
 .googleadservices.com
@@ -12,8 +15,6 @@
 .settings-win.data.microsoft.com
 .telemetry.microsoft.com
 .events.data.microsoft.com
-
-# Microsoft NCSI
 .msftncsi.com
 .dns.msftncsi.com
 .msftconnecttest.com
@@ -356,5 +357,4 @@ static.v2ex.com
 #B站关联 上海灵羊文化传播有限公司
 .hdslb.com
 
-#Apple
-.safebrowsing.apple
+
