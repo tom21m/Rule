@@ -3,3 +3,4 @@
 .v2ex.com
 .github.com
 .githubusercontent.com
+.kechuang.org
