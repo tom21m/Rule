@@ -1,4 +1,5 @@
-.binance.org
 .cnbeta.com.tw
 .cnbetacdn.com
 .v2ex.com
+.github.com
+.githubusercontent.com
