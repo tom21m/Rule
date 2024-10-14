@@ -7,3 +7,4 @@
 @@||dynamics.com^$stealth=3p-auth
 @@||azure-apim.net^$stealth=3p-auth
 @@||api.m-team.io^$stealth=referrer|3p-auth
+@@||openai.com^$stealth=3p-auth
