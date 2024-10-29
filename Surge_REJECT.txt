@@ -8,6 +8,15 @@
 .people-pa.googleapis.com
 .suggestqueries.google.com
 .safebrowsing.googleapis.com
+.app-measurement.com
+.app-analytics-services-att.com
+.app-analytics-services.com
+.analytics.google.com
+.googletagmanager.com
+.urchin.com
+.fps.goog
+.googleoptimize.com
+
 
 # Microsoft
 .cdp.microsoft.com
