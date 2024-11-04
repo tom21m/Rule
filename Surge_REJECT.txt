@@ -366,4 +366,14 @@ static.v2ex.com
 #B站关联 上海灵羊文化传播有限公司
 .hdslb.com
 
+#输入法
+.beacon.qq.com
+.sginput.qq.com
+.get.sogou.com
+.ime.sogou.com
+.macime.sogou.com
+.pinyin.sogou.com
+.shouji.sogou.com
+.account.sogou.com
+.oth.str.mdt.qq.com
 
