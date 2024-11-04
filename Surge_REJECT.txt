@@ -363,7 +363,7 @@ static.v2ex.com
 #百词斩
 .advertise.bczeducation.cn
 
-#B站关联 上海灵羊文化传播有限公司
+#B站
 .hdslb.com
 
 #输入法
