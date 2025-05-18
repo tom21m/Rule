@@ -4,4 +4,3 @@
 .github.com
 .githubusercontent.com
 .kechuang.org
-.api.segment.io
