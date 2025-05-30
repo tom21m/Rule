@@ -17,3 +17,6 @@
 .xiaohu8.com
 .zhijianfengyi.cn
 .zhijianfengyi.com
+
+#飞书
+.feishu.cn
