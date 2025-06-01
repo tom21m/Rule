@@ -7,4 +7,4 @@
 @@||dynamics.com^$stealth=3p-auth
 @@||azure-apim.net^$stealth=3p-auth
 @@||api.m-team.io^$stealth=referrer|3p-auth
-@@||app.card.zebec.io^$stealth=referrer|3p-auth
+@@||solana-mainnet.quiknode.pro^$stealth=referrer
