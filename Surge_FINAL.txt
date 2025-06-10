@@ -5,3 +5,4 @@
 .githubusercontent.com
 .kechuang.org
 .supportxmr.com
+.tradingview.com
