@@ -46,11 +46,6 @@
 .dns.jd.com
 .jddebug.com
 
-# V2ex
-i.v2ex.com
-cdn.v2ex.com
-static.v2ex.com
-
 # 中国移动
 .config.cmpassport.com
 .www.cmpassport.com
