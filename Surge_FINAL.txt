@@ -1,8 +1,7 @@
 .cnbeta.com.tw
 .cnbetacdn.com
 .v2ex.com
-.github.com
-.githubusercontent.com
 .kechuang.org
 .supportxmr.com
 .tradingview.com
+.hyperliquid.xyz
