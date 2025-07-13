@@ -5,3 +5,5 @@
 .supportxmr.com
 .tradingview.com
 .hyperliquid.xyz
+.hyperunit.xyz
+.arbitrum.io
