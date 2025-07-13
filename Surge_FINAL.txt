@@ -3,6 +3,7 @@
 .v2ex.com
 .kechuang.org
 .supportxmr.com
+.coinmarketcap.com
 .tradingview.com
 .hyperliquid.xyz
 .hyperunit.xyz
