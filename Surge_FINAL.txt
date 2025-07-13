@@ -8,3 +8,4 @@
 .hyperliquid.xyz
 .hyperunit.xyz
 .arbitrum.io
+.3commas.io
