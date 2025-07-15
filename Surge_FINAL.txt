@@ -10,3 +10,4 @@
 .arbitrum.io
 .statuspage.io
 .3commas.io
+.ledger.com
