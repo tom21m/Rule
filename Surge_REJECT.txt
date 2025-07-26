@@ -393,3 +393,6 @@
 .updateime.baidu.com  
 .vinci.ie.sogou.com  
 .wap.sogou.com  
+
+# 百度
+www.baidu.com
