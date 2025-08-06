@@ -404,3 +404,6 @@ www.baidu.com
 
 # OpenCat
 .rc-backup.com
+
+# BlockBeats
+.sunofbeaches.com
