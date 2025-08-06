@@ -82,8 +82,6 @@
 .micloud.xiaomi.net
 .zhuti.intl.xiaomi.com
 .data.mistat.intl.xiaomi.com
-.ad.intl.xiaomi.com
-.app.chat.global.xiaomi.net
 .tracking.intl.miui.com
 .api.miwifi.com
 
@@ -293,8 +291,6 @@
 .growth-activity01.com
 .growth-activity02.com
 .growth-activity03.com
-.juliangyinqing.com
-.juliangyinqing.com
 .juliangyinqing.com
 .oceancus.com
 .oceanengine.com
