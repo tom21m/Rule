@@ -16,6 +16,8 @@
 .urchin.com
 .fps.goog
 .googleoptimize.com
+.firebaseinstallations.googleapis.com
+.firebaselogging-pa.googleapis.com
 
 
 # Microsoft
