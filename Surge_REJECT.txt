@@ -398,3 +398,10 @@
 
 # 百度
 www.baidu.com
+
+#其他分析服务
+.optimizely.com
+.loggly.com
+.graph.facebook.com
+.marketingcloudapis.com
+.marketingcloudapis.com
