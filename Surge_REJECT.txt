@@ -413,7 +413,10 @@ www.baidu.com
 .bdlog.tanx.com
 .alibabachengdun.com
 ulk.alimama.com
-
+click.tanx.com
+click.taobao.com
+mos.m.taobao.com
+market.m.taobao.com
 
 # 饿了么
 .metis-er.ele.me
