@@ -8,4 +8,3 @@
 @@||azure-apim.net^$stealth=3p-auth
 @@||api.m-team.io^$stealth=referrer|3p-auth
 @@||solana-mainnet.quiknode.pro^$stealth=referrer
-8marketcap.com###default-table > tbody:last-child > tr.ad-tr.no-sort:nth-child(80) > td
