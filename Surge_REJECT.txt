@@ -420,3 +420,10 @@ market.m.taobao.com
 
 # 饿了么
 .metis-er.ele.me
+
+# 掌之淘
+.zztfly.com
+
+
+
+
