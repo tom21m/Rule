@@ -412,11 +412,12 @@ www.baidu.com
 .loggw-ex.alipay.com
 .bdlog.tanx.com
 .alibabachengdun.com
-ulk.alimama.com
-click.tanx.com
-click.taobao.com
-mos.m.taobao.com
-market.m.taobao.com
+.ulk.alimama.com
+.click.tanx.com
+.click.taobao.com
+.mos.m.taobao.com
+.market.m.taobao.com
+.ace.tb.cn
 
 # 饿了么
 .metis-er.ele.me
