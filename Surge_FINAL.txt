@@ -11,3 +11,4 @@
 .statuspage.io
 .3commas.io
 .ledger.com
+.pump.fun
