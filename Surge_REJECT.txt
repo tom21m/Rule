@@ -401,9 +401,9 @@ www.baidu.com
 .graph.facebook.com
 .marketingcloudapis.com
 
-
 # OpenCat
 .rc-backup.com
+api.revenuecat.com
 
 # BlockBeats
 .sunofbeaches.com
