@@ -403,7 +403,7 @@ www.baidu.com
 
 # OpenCat
 .rc-backup.com
-api.revenuecat.com
+.revenuecat.com
 
 # BlockBeats
 .sunofbeaches.com
