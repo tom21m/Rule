@@ -18,5 +18,8 @@
 .zhijianfengyi.cn
 .zhijianfengyi.com
 
-#飞书
+# 飞书
 .feishu.cn
+
+# 天眼查
+.tianyancha.com
