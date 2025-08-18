@@ -425,6 +425,9 @@ www.baidu.com
 # 掌之淘
 .zztfly.com
 
+# Binance
+.api.saasexch.com
+
 
 
 
