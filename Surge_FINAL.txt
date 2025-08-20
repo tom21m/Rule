@@ -12,3 +12,5 @@
 .3commas.io
 .ledger.com
 .pump.fun
+.x.com
+.twitter.com
