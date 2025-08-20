@@ -1,16 +1,7 @@
-.cnbeta.com.tw
-.cnbetacdn.com
-.v2ex.com
 .kechuang.org
 .supportxmr.com
-.coinmarketcap.com
-.tradingview.com
 .hyperliquid.xyz
 .hyperunit.xyz
 .arbitrum.io
-.statuspage.io
 .3commas.io
-.ledger.com
 .pump.fun
-.x.com
-.twitter.com
