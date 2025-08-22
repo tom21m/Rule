@@ -426,7 +426,8 @@ www.baidu.com
 .zztfly.com
 
 # Binance
-.api.saasexch.com
+.saasexch.co
+.saasexch.com
 
 
 
