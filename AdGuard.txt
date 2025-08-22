@@ -8,4 +8,4 @@
 @@||azure-apim.net^$stealth=3p-auth
 @@||api.m-team.io^$stealth=referrer|3p-auth
 @@||solana-mainnet.quiknode.pro^$stealth=referrer
-@@||powerautomate.com^$stealth=3p-auth
+@@||api.powerplatform.com^$stealth=3p-auth
