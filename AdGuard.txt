@@ -1,6 +1,5 @@
 ! PancakeSwap
 @@||pancakeswap.finance^$stealth=useragent
-
 ! Power Automate
 @@||webshell.suite.office.com^$stealth=3p-auth
 @@||admin.microsoft.com^$stealth=3p-auth
