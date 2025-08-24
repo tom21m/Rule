@@ -84,6 +84,7 @@
 .data.mistat.intl.xiaomi.com
 .tracking.intl.miui.com
 .api.miwifi.com
+.stat.youpin.mi.com
 
 # 友盟
 .umeng.com
