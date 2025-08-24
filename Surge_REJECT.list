@@ -431,8 +431,14 @@ www.baidu.com
 .saasexch.com
 
 # 拼多多
+# 拼多多
 .th.pinduoduo.com
-.th-*.pinduoduo.com
+.th-a.pinduoduo.com
+.th-b.pinduoduo.com
+.th-c.pinduoduo.com
 .apm.pinduoduo.com
-.apm-*.pinduoduo.com
+.apm-a.pinduoduo.com
+.apm-b.pinduoduo.com
+.apm-c.pinduoduo.com
+
 
