@@ -343,7 +343,7 @@
 .miui-fxcse.avlyun.com
 .api.installer.xiaomi.com
 
-# GXBMONITOR
+# 其他
 .bbums.cn
 .bbums.org.cn
 
