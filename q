@@ -1,1 +1,2 @@
-q
+.hyperliquid.xyz
+.hyperunit.xyz
