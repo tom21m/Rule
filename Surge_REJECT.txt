@@ -430,6 +430,7 @@ www.baidu.com
 .saasexch.co
 .saasexch.com
 
-
+# 拼多多
+.th.pinduoduo.com
 
 
