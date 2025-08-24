@@ -432,5 +432,6 @@ www.baidu.com
 
 # 拼多多
 .th.pinduoduo.com
-
+.apm.pinduoduo.com
+.apm-*.pinduoduo.com
 
