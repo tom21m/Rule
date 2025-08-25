@@ -359,6 +359,8 @@
 
 #B站
 .hdslb.com
+.szbdyd.com
+.mcdn.bilivideo.cn
 
 # 输入法
 .account.sogou.com  
@@ -431,7 +433,6 @@ www.baidu.com
 .saasexch.com
 
 # 拼多多
-# 拼多多
 .th.pinduoduo.com
 .th-a.pinduoduo.com
 .th-b.pinduoduo.com
@@ -441,4 +442,13 @@ www.baidu.com
 .apm-b.pinduoduo.com
 .apm-c.pinduoduo.com
 
+# QQ音乐
+.tp2p.kg.qq.com
+.twns.p2ptun.qq.com
 
+# 网易云音乐
+.sd-gl.xinqiucc.com
+.xyp-n.kuiniuca.com
+.sdk1xyajs.data.kuiniuca.com
+.ac.dun.163.com
+.fp-upload.dun.163.com
