@@ -1,5 +1,8 @@
 # Apple
+.xp.apple.com
 .safebrowsing.apple
+.smoot.apple.com
+.smoot.apple.cn
 
 # Google
 .google-analytics.com
@@ -421,6 +424,14 @@ www.baidu.com
 .mos.m.taobao.com
 .market.m.taobao.com
 .ace.tb.cn
+.guide-acs.m.taobao.com
+.atoken.m.taobao.com
+.acs.m.taobao.com
+.mo.m.taobao.com
+.trade-acs.m.taobao.com
+.audid-api.taobao.com
+.mmstat.com
+
 
 # 饿了么
 .metis-er.ele.me
