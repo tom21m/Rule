@@ -421,7 +421,7 @@ www.baidu.com
 # 阿里巴巴
 .loggw-ex.alipay.com
 .tanx.com
-.alibabachengdun.com
+#.alibabachengdun.com
 .ulk.alimama.com
 .click.taobao.com
 .mos.m.taobao.com
@@ -431,7 +431,7 @@ www.baidu.com
 .atoken.m.taobao.com
 .trade-acs.m.taobao.com
 .audid-api.taobao.com
-.mmstat.com
+#.mmstat.com
 .acs.m.taobao.com
 .tdum.alibaba.com
 .openmonitor.alipay-eco.com
