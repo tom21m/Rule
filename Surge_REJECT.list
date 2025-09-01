@@ -431,11 +431,11 @@ www.baidu.com
 .atoken.m.taobao.com
 .trade-acs.m.taobao.com
 .audid-api.taobao.com
-.mmstat.com
+#.mmstat.com
 .acs.m.taobao.com
 .tdum.alibaba.com
 #.openmonitor.alipay-eco.com
-.mdap.alipay.com
+#.mdap.alipay.com
 
 # 淘宝联盟
 #.mo.m.taobao.com
