@@ -430,7 +430,7 @@ www.baidu.com
 .guide-acs.m.taobao.com
 .atoken.m.taobao.com
 .trade-acs.m.taobao.com
-.audid-api.taobao.com
+#.audid-api.taobao.com
 #.mmstat.com
 #.acs.m.taobao.com
 #.tdum.alibaba.com
