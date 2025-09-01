@@ -419,23 +419,23 @@ www.baidu.com
 .sunofbeaches.com
 
 # 阿里巴巴
-.loggw-ex.alipay.com
-.tanx.com
+#.loggw-ex.alipay.com
+#.tanx.com
 #.alibabachengdun.com
-.ulk.alimama.com
-.click.taobao.com
-.mos.m.taobao.com
-.market.m.taobao.com
-.ace.tb.cn
-.guide-acs.m.taobao.com
-.atoken.m.taobao.com
+#.ulk.alimama.com
+#.click.taobao.com
+#.mos.m.taobao.com
+#.market.m.taobao.com
+#.ace.tb.cn
+#.guide-acs.m.taobao.com
+#.atoken.m.taobao.com
 #.trade-acs.m.taobao.com
-.audid-api.taobao.com
+#.audid-api.taobao.com
 #.mmstat.com
-.acs.m.taobao.com
-.tdum.alibaba.com
-.openmonitor.alipay-eco.com
-.mdap.alipay.com
+#.acs.m.taobao.com
+#.tdum.alibaba.com
+#.openmonitor.alipay-eco.com
+#.mdap.alipay.com
 
 # 淘宝联盟
 #.mo.m.taobao.com
