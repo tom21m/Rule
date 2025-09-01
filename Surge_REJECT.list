@@ -422,8 +422,8 @@ www.baidu.com
 .loggw-ex.alipay.com
 .tanx.com
 .alibabachengdun.com
-.ulk.alimama.com
-.click.taobao.com
+#.ulk.alimama.com
+#.click.taobao.com
 #.mos.m.taobao.com
 #.market.m.taobao.com
 #.ace.tb.cn
