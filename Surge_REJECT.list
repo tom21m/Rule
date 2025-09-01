@@ -432,8 +432,8 @@ www.baidu.com
 .trade-acs.m.taobao.com
 .audid-api.taobao.com
 #.mmstat.com
-.acs.m.taobao.com
-.tdum.alibaba.com
+#.acs.m.taobao.com
+#.tdum.alibaba.com
 #.openmonitor.alipay-eco.com
 #.mdap.alipay.com
 
