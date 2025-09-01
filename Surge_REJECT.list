@@ -427,9 +427,9 @@ www.baidu.com
 .mos.m.taobao.com
 .market.m.taobao.com
 .ace.tb.cn
-.guide-acs.m.taobao.com
-.atoken.m.taobao.com
-.trade-acs.m.taobao.com
+#.guide-acs.m.taobao.com
+#.atoken.m.taobao.com
+#.trade-acs.m.taobao.com
 #.audid-api.taobao.com
 #.mmstat.com
 #.acs.m.taobao.com
