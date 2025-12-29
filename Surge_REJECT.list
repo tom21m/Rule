@@ -476,3 +476,7 @@ www.baidu.com
 .mediacloud.xiaohonshu.com
 .gslb.xiaohonshu.com
 .search.xiaohonshu.com
+
+# DNS
+.dns.alidns.com
+.doh.pub
