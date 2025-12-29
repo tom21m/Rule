@@ -471,3 +471,8 @@ www.baidu.com
 # Meta
 .graph.facebook.com
 .test-gateway.instagram.com
+
+# 小红书
+.mediacloud.xiaohonshu.com
+.gslb.xiaohonshu.com
+.search.xiaohonshu.com
