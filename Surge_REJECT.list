@@ -407,7 +407,6 @@ www.baidu.com
 # 其他分析服务
 .optimizely.com
 .loggly.com
-.graph.facebook.com
 .marketingcloudapis.com
 
 # OpenCat
@@ -469,4 +468,6 @@ www.baidu.com
 # 流氓软件
 .iobit.com
 
-
+# Meta
+.graph.facebook.com
+.test-gateway.instagram.com
