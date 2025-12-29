@@ -473,9 +473,12 @@ www.baidu.com
 .test-gateway.instagram.com
 
 # 小红书
+.xiaohongshu.com
+.ad.xiaohongshu.com
 .mediacloud.xiaohonshu.com
-#.gslb.xiaohonshu.com
+.gslb.xiaohonshu.com
 .search.xiaohonshu.com
+.redbascket.com
 
 # DNS
 .dns.alidns.com
