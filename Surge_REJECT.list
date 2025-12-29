@@ -474,7 +474,7 @@ www.baidu.com
 
 # 小红书
 .mediacloud.xiaohonshu.com
-.gslb.xiaohonshu.com
+#.gslb.xiaohonshu.com
 .search.xiaohonshu.com
 
 # DNS
