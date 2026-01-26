@@ -483,3 +483,6 @@ www.baidu.com
 # DNS
 .dns.alidns.com
 .doh.pub
+
+# MyWhoosh
+logservice.mywhoosh.com
