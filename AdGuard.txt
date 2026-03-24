@@ -15,4 +15,5 @@
 @@||azure-apihub.net^$stealth=3p-auth
 
 ！搞定
-@@||www.gaoding.com^$stealth=referrer|3p-auth
+@@||www.gaoding.com^$stealth=3p-auth|3p-cache
+@@||gdesign-dam-hw.obs.cn*.myhuaweicloud.com$stealth=3p-auth|3p-cache
