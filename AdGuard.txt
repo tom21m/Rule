@@ -1,5 +1,6 @@
 ! PancakeSwap
 ! @@||pancakeswap.finance^$stealth=useragent
+
 ! Power Automate
 @@||webshell.suite.office.com^$stealth=3p-auth
 @@||admin.microsoft.com^$stealth=3p-auth
@@ -12,3 +13,6 @@
 @@||solana-mainnet.quiknode.pro^$stealth=referrer
 @@||api.powerplatform.com^$stealth=3p-auth
 @@||azure-apihub.net^$stealth=3p-auth
+
+！搞定
+@@||www.gaoding.com^$stealth=referrer|3p-auth
