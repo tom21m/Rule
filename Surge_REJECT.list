@@ -18,6 +18,9 @@
 .googleoptimize.com
 .firebaseinstallations.googleapis.com
 .firebaselogging-pa.googleapis.com
+.monitoring.googleapis.com
+.logging.googleapis.com
+.cloudtrace.googleapis.com
 
 
 # Microsoft
@@ -29,6 +32,9 @@
 .msftncsi.com
 .dns.msftncsi.com
 .msftconnecttest.com
+..monitor.azure.com
+..loganalytics.io
+.dc.services.visualstudio.com
 
 # 腾讯
 .log.weixin.qq.com
@@ -299,7 +305,6 @@
 .juliangyinqing.com
 .oceancus.com
 .oceanengine.com
-.oceanengine.com
 .oe-appstore.com
 .pangle.cn
 .pangolin-dsp-toutiao-b.com
@@ -503,4 +508,23 @@ www.baidu.com
 .browser-intake-ap3-datadoghq.com
 .browser-intake-ap4-datadoghq.com
 .browser-intake-ap5-datadoghq.com
+
+# New Relic
+.collector.newrelic.com
+.collector.eu.newrelic.com
+.collector.eu01.nr-data.net
+.log-api.newrelic.com
+
+# Splunk
+.observe.appdynamics.com
+.cdn.appdynamics.com
+.pdx-sls-agent-api.saas.appdynamics.com
+
+# Amazon
+.monitoring.amazonaws.com
+.logs.amazonaws.com
+.logs.us-east-1.amazonaws.com
+
+
+
 
