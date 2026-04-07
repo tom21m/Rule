@@ -1,5 +1,16 @@
 # Apple
-
+.xp.apple.com
+.pancake.apple.com
+.iadsdk.apple.com
+.securemetrics.apple.com
+.weather-analytics-events.apple.com
+.stocks-analytics-events.apple.com
+.supportmetrics.apple-support.akadns.net
+.idiagnostics.apple.com
+.iphonesubmissions.apple.com
+.cssubmissions.apple.com
+.2o7.net
+.pipe.cloudapp.aria.akadns.net
 
 # Google
 .google-analytics.com
@@ -21,7 +32,6 @@
 .monitoring.googleapis.com
 .logging.googleapis.com
 .cloudtrace.googleapis.com
-
 
 # Microsoft
 .cdp.microsoft.com
@@ -102,7 +112,6 @@
 .beats.be.mi.com
 .api.miinsurtech.com
 .mina.mi.com
-
 
 # 友盟
 .umeng.com
