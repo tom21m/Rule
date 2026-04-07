@@ -82,19 +82,22 @@
 .message.189cube.com
 
 # 小米
-.app.chat.global.xiaomi.net
-.ad.intl.xiaomi.com
 .ad.xiaomi.com
+.ad.intl.xiaomi.com
+.app.chat.xiaomi.net
+.xmpush.global.xiaomi.com
+.app.chat.global.xiaomi.net
 .api.setting.intl.miui.com
 .market.xiaomi.com
 .resolver.msg.global.xiaomi.net
-.xmpush.global.xiaomi.com
 .micloud.xiaomi.net
 .zhuti.intl.xiaomi.com
 .data.mistat.intl.xiaomi.com
+.tracking.miui.com
 .tracking.intl.miui.com
 .api.miwifi.com
 .stat.youpin.mi.com
+
 
 # 友盟
 .umeng.com
