@@ -533,6 +533,32 @@ www.baidu.com
 .logs.amazonaws.com
 .logs.us-east-1.amazonaws.com
 
+# Anthropic
+.statsig.anthropic.com
 
+# GrowthBook
+.anthropic.com
+.api.anthropic.com
+.growthbook.io
+.api.growthbook.io
+.cdn.growthbook.io
 
+# Statsig
+.statsig.com
+.statsigapi.net
+.featuregates.org
+.featureassets.org
+.assetsconfigcdn.org
+.prodregistryv2.org
+.beyondwickedmapping.org
+.cloudflare-dns.com
+.console.statsigcdn.com
 
+# Sentry
+.sentry.io
+.sentry.io
+.sentry-cdn.com
+.sentry-cdn.com
+.getsentry.net
+.getsentry.net
+.ingest.sentry.io
