@@ -577,3 +577,9 @@ www.baidu.com
 .bigquerystorage.googleapis.com
 .bigqueryreservation.googleapis.com
 .bigqueryconnection.googleapis.com
+
+# IP查询
+.api.ipify.org
+
+# CoinMarketCap
+.api.saasexch.info
