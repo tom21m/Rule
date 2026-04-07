@@ -562,3 +562,9 @@ www.baidu.com
 .getsentry.net
 .getsentry.net
 .ingest.sentry.io
+
+# BigQuery
+.bigquery.googleapis.com
+.bigquerystorage.googleapis.com
+.bigqueryreservation.googleapis.com
+.bigqueryconnection.googleapis.com
