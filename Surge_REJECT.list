@@ -55,10 +55,18 @@
 .msftncsi.com
 .dns.msftncsi.com
 .msftconnecttest.com
-..monitor.azure.com
-..loganalytics.io
+.monitor.azure.com
+.loganalytics.io
 .dc.services.visualstudio.com
 .smartscreen.microsoft.com
+.ads.microsoft.com
+.bat.bing.com
+.c.bing.com
+.ac.bing.com
+.vortex.data.microsoft.com
+.settings-win.data.microsoft.com
+.watson.telemetry.microsoft.com
+.telemetry.microsoft.com
 
 # 腾讯
 .log.weixin.qq.com
