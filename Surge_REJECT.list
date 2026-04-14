@@ -1,14 +1,14 @@
 # Apple
-analytics.apple.com
-ads.apple.com
-iad.apple.com
-iadsdk.apple.com
-iadcontent.apple.com
-metrics.mzstatic.com
+.analytics.apple.com
+.ads.apple.com
+.iad.apple.com
+.iadsdk.apple.com
+.iadcontent.apple.com
+.metrics.mzstatic.com
 .xp.apple.com
-weather-analytics-events.apple.com
-stocks-analytics-events.apple.com
-api.smoot.apple.com
+.weather-analytics-events.apple.com
+.stocks-analytics-events.apple.com
+.api.smoot.apple.com
 .pancake.apple.com
 .securemetrics.apple.com
 .weather-analytics-events.apple.com
@@ -22,8 +22,12 @@ api.smoot.apple.com
 .safebrowsing.apple
 
 # Google
-.google-analytics.com
+.doubleclick.net
+.adservice.google.com
 .googleadservices.com
+.google-analytics.com
+.pagead2.googlesyndication.com
+.partner.googleadservices.com
 .growth-pa.googleapis.com
 .people-pa.googleapis.com
 .suggestqueries.google.com
