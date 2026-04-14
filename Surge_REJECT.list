@@ -11,6 +11,7 @@
 .cssubmissions.apple.com
 .2o7.net
 .pipe.cloudapp.aria.akadns.net
+.safebrowsing.apple
 
 # Google
 .google-analytics.com
@@ -45,6 +46,7 @@
 ..monitor.azure.com
 ..loganalytics.io
 .dc.services.visualstudio.com
+.smartscreen.microsoft.com
 
 # 腾讯
 .log.weixin.qq.com
