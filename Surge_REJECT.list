@@ -115,6 +115,8 @@
 
 # 小米
 .ad.xiaomi.com
+.ad1.xiaomi.com
+.admob.xiaomi.com
 .ad.intl.xiaomi.com
 .chat.xiaomi.net
 .app.chat.xiaomi.net
@@ -134,6 +136,11 @@
 .beats.be.mi.com
 .api.miinsurtech.com
 .mina.mi.com
+.data.mistat.xiaomi.com
+.sdkconfig.ad.xiaomi.com
+.sgp-log.mi.com
+.stat.xiaomi.com
+.o2o.api.xiaomi.com
 
 # 友盟
 .umeng.com
