@@ -1,7 +1,7 @@
 # Apple
 .analytics.apple.com
 .ads.apple.com
-.iad.apple.com
+#.iad.apple.com
 #.iadsdk.apple.com
 .iadcontent.apple.com
 .metrics.mzstatic.com
