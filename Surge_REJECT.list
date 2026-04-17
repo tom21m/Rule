@@ -5,7 +5,7 @@
 .iadsdk.apple.com
 .iadcontent.apple.com
 .metrics.mzstatic.com
-.xp.apple.com
+#.xp.apple.com
 .weather-analytics-events.apple.com
 .stocks-analytics-events.apple.com
 .api.smoot.apple.com
