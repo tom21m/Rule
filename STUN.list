@@ -1,5 +1,6 @@
 DOMAIN-KEYWORD,stun
 DEST-PORT,3478-3479
+DEST-PORT,319302
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
 DOMAIN,stun.1-voip.com
