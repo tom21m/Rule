@@ -1,5 +1,5 @@
 DOMAIN-KEYWORD,stun
-DEST-PORT,3478
+DEST-PORT,3478-3479
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
 DOMAIN,stun.1-voip.com
@@ -312,7 +312,7 @@ DOMAIN,stun.voipcheap.co.uk
 DOMAIN,stun.voipcheap.com
 DOMAIN,stun.voipconnect.com
 DOMAIN,stun.voipdiscount.com
-DOMAIN,stun.voipdomain
+DOMAIN,stun.voipdomain.com
 DOMAIN,stun.voipfibre.com
 DOMAIN,stun.voipgain.com
 DOMAIN,stun.voipgate.com
