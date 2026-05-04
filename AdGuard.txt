@@ -19,4 +19,4 @@
 @@||gdesign-dam-hw.obs.cn*.myhuaweicloud.com$stealth=3p-auth|3p-cache
 
 ！ VPN
-@@||berrypass.net^$stealth=3p-auth
+@@||grt-a.htj5o5i.86-2.ae8t-8.ah-eg.agh-l34rk.868862.xyz^$stealth=3p-auth
