@@ -3,7 +3,7 @@ name: anti-AD split rules
 on:
   schedule:
     # 每天北京时间 04:30
-    - cron: "30 20 * * *"
+    - cron: "30 4 * * *"
 
   workflow_dispatch:
 
