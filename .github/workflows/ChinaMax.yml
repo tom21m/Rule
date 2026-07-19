@@ -35,8 +35,8 @@ jobs:
           trap 'rm -rf "$TMP"' EXIT
 
 
-          SOURCE="$TMP/source.txt"
-          CLEAN="$TMP/clean.txt"
+          SOURCE="$TMP/source.list"
+          CLEAN="$TMP/clean.list"
 
 
           echo "下载源文件..."
@@ -112,7 +112,7 @@ jobs:
 
           head -n 50000 \
             "$CLEAN" \
-            > "$TMP/ChinaMax-1.txt"
+            > "$TMP/ChinaMax-1.list"
 
 
 
@@ -120,12 +120,12 @@ jobs:
 
           tail -n +50001 \
             "$CLEAN" \
-            > "$TMP/ChinaMax-2.txt"
+            > "$TMP/ChinaMax-2.list"
 
 
 
-          COUNT1=$(wc -l < "$TMP/ChinaMax-1.txt" | tr -d " ")
-          COUNT2=$(wc -l < "$TMP/ChinaMax-2.txt" | tr -d " ")
+          COUNT1=$(wc -l < "$TMP/ChinaMax-1.list" | tr -d " ")
+          COUNT2=$(wc -l < "$TMP/ChinaMax-2.list" | tr -d " ")
 
 
 
@@ -149,12 +149,12 @@ jobs:
 
           echo "替换文件..."
 
-          mv "$TMP/ChinaMax-1.txt" \
-             ChinaMax-1.txt
+          mv "$TMP/ChinaMax-1.list" \
+             ChinaMax-1.list
 
 
-          mv "$TMP/ChinaMax-2.txt" \
-             ChinaMax-2.txt
+          mv "$TMP/ChinaMax-2.list" \
+             ChinaMax-2.list
 
 
 
@@ -175,8 +175,8 @@ jobs:
 
 
           git add \
-            ChinaMax-1.txt \
-            ChinaMax-2.txt \
+            ChinaMax-1.list \
+            ChinaMax-2.list \
             .ChinaMax.sha256
 
 
