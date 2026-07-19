@@ -118,7 +118,7 @@ jobs:
 
           echo "生成第二份剩余..."
 
-          tail -n +50001 \
+          tail -n +70001 \
             "$CLEAN" \
             > "$TMP/ChinaMax-2.list"
 
