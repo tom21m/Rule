@@ -101,16 +101,16 @@ jobs:
           echo "有效规则数量: $TOTAL"
 
 
-          if [ "$TOTAL" -le 50000 ]; then
+          if [ "$TOTAL" -le 70000 ]; then
               echo "规则数量异常"
               exit 1
           fi
 
 
 
-          echo "生成第一份 50000 行..."
+          echo "生成第一份 70000 行..."
 
-          head -n 50000 \
+          head -n 70000 \
             "$CLEAN" \
             > "$TMP/ChinaMax-1.list"
 
@@ -134,7 +134,7 @@ jobs:
 
 
 
-          if [ "$COUNT1" != "50000" ]; then
+          if [ "$COUNT1" != "70000" ]; then
               echo "第一份数量错误"
               exit 1
           fi
