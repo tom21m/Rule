@@ -7,11 +7,8 @@ on:
       timezone: "Asia/Shanghai"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 concurrency:
-  group: SplitRulesanti-AD
+  group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
 # 修改源地址、每份行数或输出文件名时，只需调整这里。
@@ -23,34 +20,51 @@ env:
   OUTPUT_SUFFIX: ".list"
   HASH_FILE: ".anti-AD.sha256"
   MIN_RULES: "50001"
+  LC_ALL: "C"
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        # actions/checkout v6.0.2；固定完整 SHA，避免可移动标签带来的供应链风险。
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: Download, clean and split
-        shell: bash
         run: |
           set -euo pipefail
 
-          if ! [[ "$LINES_PER_FILE" =~ ^[1-9][0-9]*$ ]]; then
-            echo "::error::LINES_PER_FILE 必须是大于 0 的整数"
+          fail() {
+            echo "::error::$*"
             exit 1
-          fi
+          }
 
-          if ! [[ "$MIN_RULES" =~ ^[1-9][0-9]*$ ]]; then
-            echo "::error::MIN_RULES 必须是大于 0 的整数"
-            exit 1
-          fi
-
-          if [[ "$OUTPUT_PREFIX" == */* || "$OUTPUT_SUFFIX" == */* ]]; then
-            echo "::error::OUTPUT_PREFIX 和 OUTPUT_SUFFIX 不能包含斜杠"
-            exit 1
-          fi
+          [[ "$SOURCE_URL" == https://* ]] ||
+            fail "SOURCE_URL 必须使用 HTTPS"
+          [[ "$LINES_PER_FILE" =~ ^[1-9][0-9]*$ ]] ||
+            fail "LINES_PER_FILE 必须是大于 0 的整数"
+          [[ "$MIN_RULES" =~ ^[1-9][0-9]*$ ]] ||
+            fail "MIN_RULES 必须是大于 0 的整数"
+          [[ -n "$OUTPUT_PREFIX" && -n "$OUTPUT_SUFFIX" ]] ||
+            fail "OUTPUT_PREFIX 和 OUTPUT_SUFFIX 不能为空"
+          [[ "$OUTPUT_PREFIX" != */* && "$OUTPUT_SUFFIX" != */* ]] ||
+            fail "OUTPUT_PREFIX 和 OUTPUT_SUFFIX 不能包含斜杠"
+          [[ -n "$OUTPUT_DIR" && "$OUTPUT_DIR" != /* ]] ||
+            fail "OUTPUT_DIR 必须是仓库内的相对路径"
+          [[ ! "$OUTPUT_DIR" =~ (^|/)\.\.(/|$) ]] ||
+            fail "OUTPUT_DIR 不能包含 .."
+          [[ -n "$HASH_FILE" && "$HASH_FILE" != /* ]] ||
+            fail "HASH_FILE 必须是仓库内的相对路径"
+          [[ ! "$HASH_FILE" =~ (^|/)\.\.(/|$) ]] ||
+            fail "HASH_FILE 不能包含 .."
 
           tmp_dir=$(mktemp -d)
           trap 'rm -rf "$tmp_dir"' EXIT
@@ -58,44 +72,43 @@ jobs:
           source_file="$tmp_dir/source.list"
           clean_file="$tmp_dir/clean.list"
           split_dir="$tmp_dir/split"
-          mkdir -p "$split_dir" "$OUTPUT_DIR"
+          mkdir -p "$split_dir" "$OUTPUT_DIR" "$(dirname "$HASH_FILE")"
 
           echo "下载源文件..."
           curl \
             --location \
-            --fail \
+            --fail-with-body \
             --show-error \
             --silent \
             --retry 3 \
             --retry-all-errors \
+            --retry-delay 2 \
             --connect-timeout 20 \
             --max-time 180 \
-            "$SOURCE_URL" \
-            --output "$source_file"
+            --proto '=https' \
+            --tlsv1.2 \
+            --output "$source_file" \
+            "$SOURCE_URL"
 
           echo "删除注释和空行..."
-          sed 's/\r$//' "$source_file" |
-            awk '
-              {
-                gsub(/^[ \t]+|[ \t]+$/, "")
-                if ($0 != "" &&
-                    $0 !~ /^#/ &&
-                    $0 !~ /^\/\// &&
-                    $0 !~ /^;/) {
-                  print
-                }
+          awk '
+            {
+              sub(/\r$/, "")
+              gsub(/^[ \t]+|[ \t]+$/, "")
+              if ($0 != "" &&
+                  $0 !~ /^#/ &&
+                  $0 !~ /^\/\// &&
+                  $0 !~ /^;/) {
+                print
               }
-            ' > "$clean_file"
+            }
+          ' "$source_file" > "$clean_file"
 
-          total=$(wc -l < "$clean_file" | tr -d '[:space:]')
+          total=$(wc -l < "$clean_file")
+          (( total >= MIN_RULES )) ||
+            fail "有效规则数量 $total 少于最低要求 $MIN_RULES"
           echo "有效规则数量: $total"
 
-          if (( total < MIN_RULES )); then
-            echo "::error::有效规则数量 $total 少于最低要求 $MIN_RULES"
-            exit 1
-          fi
-
-          echo "按每份 $LINES_PER_FILE 行生成分片..."
           awk \
             -v lines="$LINES_PER_FILE" \
             -v dir="$split_dir" \
@@ -109,65 +122,63 @@ jobs:
                   close(file)
                 }
               }
-            ' "$clean_file"
+          ' "$clean_file"
 
           expected_parts=$(( (total + LINES_PER_FILE - 1) / LINES_PER_FILE ))
           generated_total=0
 
           for (( part = 1; part <= expected_parts; part++ )); do
             file="$split_dir/$OUTPUT_PREFIX$part$OUTPUT_SUFFIX"
+            [[ -s "$file" ]] || fail "分片不存在或为空: $file"
 
-            if [[ ! -s "$file" ]]; then
-              echo "::error::分片不存在或为空: $file"
-              exit 1
-            fi
-
-            count=$(wc -l < "$file" | tr -d '[:space:]')
-            if (( count > LINES_PER_FILE )); then
-              echo "::error::分片 $part 超过 $LINES_PER_FILE 行"
-              exit 1
-            fi
+            count=$(wc -l < "$file")
+            (( count <= LINES_PER_FILE )) ||
+              fail "分片 $part 超过 $LINES_PER_FILE 行"
 
             generated_total=$((generated_total + count))
             echo "第 $part 份: $count 行"
           done
 
-          if (( generated_total != total )); then
-            echo "::error::分片总行数 $generated_total 与有效规则数 $total 不一致"
-            exit 1
-          fi
+          (( generated_total == total )) ||
+            fail "分片总行数 $generated_total 与有效规则数 $total 不一致"
 
-          echo "替换旧分片..."
+          # 只删除本工作流生成的纯数字编号分片，避免误删同名前缀文件。
           shopt -s nullglob
           for file in "$OUTPUT_DIR"/"$OUTPUT_PREFIX"*"$OUTPUT_SUFFIX"; do
             name=${file##*/}
             number=${name#"$OUTPUT_PREFIX"}
             number=${number%"$OUTPUT_SUFFIX"}
-
-            # 只删除本工作流生成的纯数字编号分片，避免误删相似文件。
             if [[ "$number" =~ ^[1-9][0-9]*$ ]]; then
               rm -f -- "$file"
             fi
           done
 
           for (( part = 1; part <= expected_parts; part++ )); do
-            mv \
+            mv -- \
               "$split_dir/$OUTPUT_PREFIX$part$OUTPUT_SUFFIX" \
               "$OUTPUT_DIR/$OUTPUT_PREFIX$part$OUTPUT_SUFFIX"
           done
 
-          sha256sum "$source_file" | awk '{print $1}' > "$HASH_FILE"
-          echo "已生成 $expected_parts 个分片"
+          # 对清洗后的有效规则计算摘要；源文件仅注释变化时不产生无意义提交。
+          sha256sum "$clean_file" | cut -d " " -f 1 > "$HASH_FILE"
+
+          {
+            echo "### anti-AD 更新结果"
+            echo
+            echo "- 有效规则：$total"
+            echo "- 分片数量：$expected_parts"
+            echo "- 每片上限：$LINES_PER_FILE"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit changes
-        shell: bash
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # 同时加入现有分片和已删除的旧分片，确保分片数量减少时也能提交删除。
+          # 加入现有分片及已删除的旧分片，确保分片数量减少时也提交删除。
           mapfile -t tracked_files < <(
             git ls-files -- "$OUTPUT_DIR/$OUTPUT_PREFIX*$OUTPUT_SUFFIX"
           )
@@ -177,12 +188,16 @@ jobs:
             "$OUTPUT_DIR"/"$OUTPUT_PREFIX"*"$OUTPUT_SUFFIX"
           )
 
-          git add -A -- "$HASH_FILE" "${tracked_files[@]}" "${current_files[@]}"
+          git add -A -- \
+            "$HASH_FILE" \
+            "${tracked_files[@]}" \
+            "${current_files[@]}"
 
           if git diff --cached --quiet; then
             echo "规则没有变化，无需提交"
             exit 0
           fi
 
-          git commit -m "SplitRules"
+          git status --short
+          git commit -m "chore: update anti-AD split rules"
           git push
