@@ -1,23 +1,31 @@
-.kechuang.org
-.supportxmr.com
-.arbitrum.io
-.3commas.io
-.pump.fun
+# 区块链
+DOMAIN-SUFFIX,supportxmr.com
+DOMAIN-SUFFIX,arbitrum.io
+DOMAIN-SUFFIX,pump.fun
 
 # Bitwarden
-.bitwarden.com
-.bitwarden.net
-.bitwarden.eu
-.btwrdn.co
-.btwrdn.com
+DOMAIN-SUFFIX,bitwarden.com
+DOMAIN-SUFFIX,bitwarden.net
+DOMAIN-SUFFIX,bitwarden.eu
+DOMAIN-SUFFIX,btwrdn.co
+DOMAIN-SUFFIX,btwrdn.com
 
 # 馒头
-.m-team.cc
+DOMAIN-SUFFIX,m-team.cc
 
 # Bike
-.garmin.com
-.garmin.cn
+DOMAIN-SUFFIX,garmin.com
+DOMAIN-SUFFIX,garmin.cn
 
 # Mail
-.proton.me
-.simplelogin.io
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,simplelogin.io
+
+# ChianCloud
+DOMAIN-SUFFIX,chiacloud.cc
+DOMAIN-SUFFIX,chialink.top
+DOMAIN-SUFFIX,chiacloud.top
+103.20.222.145
+23.173.216.238
+192.236.234.53
+
