@@ -29,8 +29,6 @@ jobs:
         run: |
           set -euo pipefail
 
-          mkdir -p rules
-
           TMP=$(mktemp -d)
 
           trap 'rm -rf "$TMP"' EXIT
@@ -151,11 +149,11 @@ jobs:
           echo "替换文件..."
 
           mv "$TMP/anti-AD-1.txt" \
-             rules/anti-AD-1.txt
+             anti-AD-1.txt
 
 
           mv "$TMP/anti-AD-2.txt" \
-             rules/anti-AD-2.txt
+             anti-AD-2.txt
 
 
 
@@ -176,8 +174,8 @@ jobs:
 
 
           git add \
-            rules/anti-AD-1.txt \
-            rules/anti-AD-2.txt \
+            anti-AD-1.txt \
+            anti-AD-2.txt \
             .anti-AD.sha256
 
 
