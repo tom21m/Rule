@@ -1,9 +1,3 @@
-# 群晖
-.quickconnect.cn
-
-# 飞书
-.feishu.cn
-
 # Temp
 nas.redbangshanghai.com 
 
@@ -52,6 +46,9 @@ nas.redbangshanghai.com
 .xiaojuchefu.cn
 .xiaojukeji.com
 
+# 飞书
+.feishu.cn
+
 # 高德
 .a-map.cn
 .a-map.co
@@ -97,6 +94,9 @@ nas.redbangshanghai.com
 .trip.com
 .tripcdn.com
 .vipdlt.com
+
+# 群晖
+.quickconnect.cn
 
 # 小米
 .408399.com
