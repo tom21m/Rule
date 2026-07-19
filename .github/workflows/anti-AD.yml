@@ -1,4 +1,4 @@
-name: Update anti-AD split rules
+name: anti-AD split rules
 
 on:
   schedule:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: anti-ad-update
+  group: anti-AD-update
   cancel-in-progress: true
 
 
@@ -60,8 +60,8 @@ jobs:
 
           OLD_HASH=""
 
-          if [ -f .anti-ad.sha256 ]; then
-              OLD_HASH=$(cat .anti-ad.sha256)
+          if [ -f .anti-AD.sha256 ]; then
+              OLD_HASH=$(cat .anti-AD.sha256)
           fi
 
 
@@ -113,7 +113,7 @@ jobs:
 
           head -n 50000 \
             "$CLEAN" \
-            > "$TMP/anti-ad-1.txt"
+            > "$TMP/anti-AD-1.txt"
 
 
 
@@ -121,12 +121,12 @@ jobs:
 
           tail -n +50001 \
             "$CLEAN" \
-            > "$TMP/anti-ad-2.txt"
+            > "$TMP/anti-AD-2.txt"
 
 
 
-          COUNT1=$(wc -l < "$TMP/anti-ad-1.txt" | tr -d " ")
-          COUNT2=$(wc -l < "$TMP/anti-ad-2.txt" | tr -d " ")
+          COUNT1=$(wc -l < "$TMP/anti-AD-1.txt" | tr -d " ")
+          COUNT2=$(wc -l < "$TMP/anti-AD-2.txt" | tr -d " ")
 
 
 
@@ -150,16 +150,16 @@ jobs:
 
           echo "替换文件..."
 
-          mv "$TMP/anti-ad-1.txt" \
-             rules/anti-ad-1.txt
+          mv "$TMP/anti-AD-1.txt" \
+             rules/anti-AD-1.txt
 
 
-          mv "$TMP/anti-ad-2.txt" \
-             rules/anti-ad-2.txt
+          mv "$TMP/anti-AD-2.txt" \
+             rules/anti-AD-2.txt
 
 
 
-          echo "$NEW_HASH" > .anti-ad.sha256
+          echo "$NEW_HASH" > .anti-AD.sha256
 
 
 
@@ -176,9 +176,9 @@ jobs:
 
 
           git add \
-            rules/anti-ad-1.txt \
-            rules/anti-ad-2.txt \
-            .anti-ad.sha256
+            rules/anti-AD-1.txt \
+            rules/anti-AD-2.txt \
+            .anti-AD.sha256
 
 
 
@@ -190,7 +190,7 @@ jobs:
 
 
           git commit \
-            -m "Update anti-AD split rules"
+            -m "anti-AD split rules"
 
 
           git push
