@@ -1,7 +1,11 @@
-# 区块链
+# Blockchain
 DOMAIN-SUFFIX,supportxmr.com
 DOMAIN-SUFFIX,arbitrum.io
 DOMAIN-SUFFIX,pump.fun
+
+# Bike
+DOMAIN-SUFFIX,garmin.com
+DOMAIN-SUFFIX,garmin.cn
 
 # Bitwarden
 DOMAIN-SUFFIX,bitwarden.com
@@ -10,17 +14,6 @@ DOMAIN-SUFFIX,bitwarden.eu
 DOMAIN-SUFFIX,btwrdn.co
 DOMAIN-SUFFIX,btwrdn.com
 
-# 馒头
-DOMAIN-SUFFIX,m-team.cc
-
-# Bike
-DOMAIN-SUFFIX,garmin.com
-DOMAIN-SUFFIX,garmin.cn
-
-# Mail
-DOMAIN-SUFFIX,proton.me
-DOMAIN-SUFFIX,simplelogin.io
-
 # ChianCloud
 DOMAIN-SUFFIX,chiacloud.cc
 DOMAIN-SUFFIX,chialink.top
@@ -28,3 +21,10 @@ DOMAIN-SUFFIX,chiacloud.top
 IP-CIDR,103.20.222.145
 IP-CIDR,23.173.216.238
 IP-CIDR,192.236.234.53
+
+# Mail
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,simplelogin.io
+
+# 馒头
+DOMAIN-SUFFIX,m-team.cc
