@@ -9,8 +9,6 @@ DOMAIN-SUFFIX,weather-analytics-events.apple.com
 DOMAIN-SUFFIX,stocks-analytics-events.apple.com
 DOMAIN-SUFFIX,api.smoot.apple.com
 DOMAIN-SUFFIX,securemetrics.apple.com
-DOMAIN-SUFFIX,weather-analytics-events.apple.com
-DOMAIN-SUFFIX,stocks-analytics-events.apple.com
 DOMAIN-SUFFIX,supportmetrics.apple-support.akadns.net
 DOMAIN-SUFFIX,idiagnostics.apple.com
 DOMAIN-SUFFIX,iphonesubmissions.apple.com
@@ -26,7 +24,6 @@ DOMAIN-SUFFIX,adservice.google.com
 DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN-SUFFIX,pagead2.googlesyndication.com
-DOMAIN-SUFFIX,partner.googleadservices.com
 DOMAIN-SUFFIX,growth-pa.googleapis.com
 DOMAIN-SUFFIX,people-pa.googleapis.com
 DOMAIN-SUFFIX,suggestqueries.google.com
@@ -52,7 +49,6 @@ DOMAIN-SUFFIX,settings-win.data.microsoft.com
 DOMAIN-SUFFIX,telemetry.microsoft.com
 DOMAIN-SUFFIX,events.data.microsoft.com
 DOMAIN-SUFFIX,msftncsi.com
-DOMAIN-SUFFIX,dns.msftncsi.com
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,monitor.azure.com
 DOMAIN-SUFFIX,loganalytics.io
@@ -63,9 +59,6 @@ DOMAIN-SUFFIX,bat.bing.com
 DOMAIN-SUFFIX,c.bing.com
 DOMAIN-SUFFIX,ac.bing.com
 DOMAIN-SUFFIX,vortex.data.microsoft.com
-DOMAIN-SUFFIX,settings-win.data.microsoft.com
-DOMAIN-SUFFIX,watson.telemetry.microsoft.com
-DOMAIN-SUFFIX,telemetry.microsoft.com
 
 # 腾讯
 DOMAIN-SUFFIX,log.weixin.qq.com
@@ -94,8 +87,6 @@ DOMAIN-SUFFIX,beacon.qq.com
 DOMAIN-SUFFIX,report.qq.com
 DOMAIN-SUFFIX,stat.y.qq.com
 DOMAIN-SUFFIX,sngapm.qq.com
-DOMAIN-SUFFIX,ios.bugly.qq.com
-DOMAIN-SUFFIX,android.bugly.qq.com
 DOMAIN-SUFFIX,szlong.weixin.qq.com
 DOMAIN-SUFFIX,monitor.qq.com
 DOMAIN-SUFFIX,risk.ctdns.net
@@ -154,8 +145,6 @@ DOMAIN-SUFFIX,ad1.xiaomi.com
 DOMAIN-SUFFIX,admob.xiaomi.com
 DOMAIN-SUFFIX,ad.intl.xiaomi.com
 DOMAIN-SUFFIX,chat.xiaomi.net
-DOMAIN-SUFFIX,app.chat.xiaomi.net
-DOMAIN-SUFFIX,mimc.chat.xiaomi.net
 DOMAIN-SUFFIX,xmpush.global.xiaomi.com
 DOMAIN-SUFFIX,app.chat.global.xiaomi.net
 DOMAIN-SUFFIX,api.setting.intl.miui.com
@@ -172,7 +161,6 @@ DOMAIN-SUFFIX,beats.be.mi.com
 DOMAIN-SUFFIX,api.miinsurtech.com
 DOMAIN-SUFFIX,mina.mi.com
 DOMAIN-SUFFIX,data.mistat.xiaomi.com
-DOMAIN-SUFFIX,sdkconfig.ad.xiaomi.com
 DOMAIN-SUFFIX,sgp-log.mi.com
 DOMAIN-SUFFIX,stat.xiaomi.com
 DOMAIN-SUFFIX,o2o.api.xiaomi.com
@@ -436,10 +424,6 @@ DOMAIN-SUFFIX,a0.app.xiaomi.com
 DOMAIN-SUFFIX,miui-fxcse.avlyun.com
 DOMAIN-SUFFIX,api.installer.xiaomi.com
 
-# 其他
-DOMAIN-SUFFIX,bbums.cn
-DOMAIN-SUFFIX,bbums.org.cn
-
 # 任子行
 DOMAIN-SUFFIX,1218.com.cn
 DOMAIN-SUFFIX,surfilter.com
@@ -455,35 +439,25 @@ DOMAIN-SUFFIX,chat.bilibili.com
 
 # 输入法
 DOMAIN-SUFFIX,account.sogou.com
-DOMAIN-SUFFIX,beacon.qq.com
-DOMAIN-SUFFIX,cloud.pinyin.sogou.com
-DOMAIN-SUFFIX,config.pinyin.sogou.com
-DOMAIN-SUFFIX,config.push.sogou.com
-DOMAIN-SUFFIX,data.ie.sogou.com
 DOMAIN-SUFFIX,dr-ime.baidu.com
 DOMAIN-SUFFIX,get.sogou.com
 DOMAIN-SUFFIX,ie.sogou.com
 DOMAIN-SUFFIX,ime.baidu.com
 DOMAIN-SUFFIX,ime.sogou.com
-DOMAIN-SUFFIX,info.pinyin.sogou.com
 DOMAIN-SUFFIX,input.shouji.sogou.com
 DOMAIN-SUFFIX,macime.sogou.com
 DOMAIN-SUFFIX,olime.baidu.com
 DOMAIN-SUFFIX,oth.str.mdt.qq.com
 DOMAIN-SUFFIX,p3p.sogou.com
 DOMAIN-SUFFIX,pcinput.baidu.com
-DOMAIN-SUFFIX,ping.pinyin.sogou.com
 DOMAIN-SUFFIX,pinyin.sogou.com
 DOMAIN-SUFFIX,proxy.sogou.com
 DOMAIN-SUFFIX,push.sogou.com
-DOMAIN-SUFFIX,security.ie.sogou.com
 DOMAIN-SUFFIX,sginput.qq.com
 DOMAIN-SUFFIX,shouji.sogou.com
 DOMAIN-SUFFIX,tb.sogou.com
-DOMAIN-SUFFIX,tips.ime.baidu.com
 DOMAIN-SUFFIX,typing.bae.baidu.com
 DOMAIN-SUFFIX,updateime.baidu.com
-DOMAIN-SUFFIX,vinci.ie.sogou.com
 DOMAIN-SUFFIX,wap.sogou.com
 
 # 百度
@@ -518,7 +492,6 @@ DOMAIN-SUFFIX,tdum.alibaba.com
 DOMAIN-SUFFIX,openmonitor.alipay-eco.com
 DOMAIN-SUFFIX,mdap.alipay.com
 DOMAIN-SUFFIX,tfc.alimama.com
-DOMAIN-SUFFIX,ud.click.taobao.com
 DOMAIN-SUFFIX,tanx.org
 DOMAIN-SUFFIX,ecombdapi.com
 DOMAIN-SUFFIX,ads.alipay.com
@@ -612,14 +585,10 @@ DOMAIN-SUFFIX,logs.amazonaws.com
 DOMAIN-SUFFIX,logs.us-east-1.amazonaws.com
 
 # Anthropic
-DOMAIN-SUFFIX,statsig.anthropic.com
+DOMAIN-SUFFIX,anthropic.com
 
 # GrowthBook
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,api.anthropic.com
 DOMAIN-SUFFIX,growthbook.io
-DOMAIN-SUFFIX,api.growthbook.io
-DOMAIN-SUFFIX,cdn.growthbook.io
 
 # Statsig
 DOMAIN-SUFFIX,statsig.com
@@ -634,12 +603,9 @@ DOMAIN-SUFFIX,console.statsigcdn.com
 
 # Sentry
 DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,sentry-cdn.com
 DOMAIN-SUFFIX,sentry-cdn.com
 DOMAIN-SUFFIX,getsentry.net
-DOMAIN-SUFFIX,getsentry.net
-DOMAIN-SUFFIX,ingest.sentry.io
+
 
 # BigQuery
 DOMAIN-SUFFIX,bigquery.googleapis.com
@@ -659,7 +625,6 @@ DOMAIN-SUFFIX,bugsnag.com
 # STUN
 DOMAIN-KEYWORD,stun
 DEST-PORT,3478-3479
-DEST-PORT,319302
 DOMAIN,iphone-stun.strato-iphone.de
 DOMAIN,relay.webwormhole.io
 DOMAIN,stun.1-voip.com
