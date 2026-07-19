@@ -1,4 +1,4 @@
-name: ChinaMax split rules
+name: SplitRules ChinaMax
 
 on:
   schedule:
@@ -101,16 +101,16 @@ jobs:
           echo "有效规则数量: $TOTAL"
 
 
-          if [ "$TOTAL" -le 65000 ]; then
+          if [ "$TOTAL" -le 60000 ]; then
               echo "规则数量异常"
               exit 1
           fi
 
 
 
-          echo "生成第一份 65000 行..."
+          echo "生成第一份 60000 行..."
 
-          head -n 65000 \
+          head -n 60000 \
             "$CLEAN" \
             > "$TMP/ChinaMax-1.list"
 
@@ -118,7 +118,7 @@ jobs:
 
           echo "生成第二份剩余..."
 
-          tail -n +65001 \
+          tail -n +60001 \
             "$CLEAN" \
             > "$TMP/ChinaMax-2.list"
 
@@ -134,7 +134,7 @@ jobs:
 
 
 
-          if [ "$COUNT1" != "65000" ]; then
+          if [ "$COUNT1" != "60000" ]; then
               echo "第一份数量错误"
               exit 1
           fi
@@ -189,7 +189,7 @@ jobs:
 
 
           git commit \
-            -m "ChinaMax split rules"
+            -m "SplitRules"
 
 
           git push
