@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: anti-AD-update
+  group: SplitRulesanti-AD
   cancel-in-progress: true
 
 # 修改源地址、每份行数或输出文件名时，只需调整这里。
