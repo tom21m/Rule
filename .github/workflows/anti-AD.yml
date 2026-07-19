@@ -1,25 +1,19 @@
-name: Update anti-AD split
+name: Update anti-AD split rules
 
 on:
   schedule:
     # 每天北京时间 04:30
-    - cron: "30 4 * * *"
-      timezone: "Asia/Shanghai"
+    - cron: "30 20 * * *"
 
-  # 支持在 Actions 页面手动运行
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: update-anti-ad
+  group: anti-ad-update
   cancel-in-progress: true
 
-env:
-  SOURCE_URL: https://anti-ad.net/surge2.txt
-  OUTPUT_DIR: rules
-  HASH_FILE: .anti-ad-source.sha256
 
 jobs:
   update:
@@ -29,174 +23,174 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Download, validate and split
-        id: update
+
+      - name: Download and split
         shell: bash
         run: |
           set -euo pipefail
 
-          TEMP_DIR=$(mktemp -d)
-          trap 'rm -rf "$TEMP_DIR"' EXIT
+          mkdir -p rules
 
-          SOURCE_FILE="$TEMP_DIR/source.txt"
-          CLEAN_FILE="$TEMP_DIR/clean.txt"
-          INVALID_FILE="$TEMP_DIR/invalid.txt"
+          TMP=$(mktemp -d)
 
-          echo "下载源文件……"
+          trap 'rm -rf "$TMP"' EXIT
+
+
+          SOURCE="$TMP/source.txt"
+          CLEAN="$TMP/clean.txt"
+
+
+          echo "下载源文件..."
 
           curl \
+            -L \
             --fail \
-            --silent \
-            --show-error \
-            --location \
             --retry 3 \
             --retry-all-errors \
             --connect-timeout 20 \
             --max-time 180 \
-            "$SOURCE_URL" \
-            --output "$SOURCE_FILE"
+            "https://anti-ad.net/surge2.txt" \
+            -o "$SOURCE"
 
-          # 判断原始源文件是否更新
-          NEW_HASH=$(sha256sum "$SOURCE_FILE" | awk '{print $1}')
-          OLD_HASH=$(cat "$HASH_FILE" 2>/dev/null || true)
 
-          if [[ "$NEW_HASH" == "$OLD_HASH" ]]; then
-            echo "源文件没有更新，停止处理"
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
+
+          echo "检查源文件是否变化..."
+
+          NEW_HASH=$(sha256sum "$SOURCE" | awk '{print $1}')
+
+          OLD_HASH=""
+
+          if [ -f .anti-ad.sha256 ]; then
+              OLD_HASH=$(cat .anti-ad.sha256)
           fi
 
-          echo "检测到源文件更新，开始处理"
 
-          # 去除 UTF-8 BOM、Windows 换行、首尾空格、空行和注释
-          sed '1s/^\xEF\xBB\xBF//' "$SOURCE_FILE" |
-            awk '
-              {
-                sub(/\r$/, "")
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "")
+          if [ "$NEW_HASH" = "$OLD_HASH" ]; then
+              echo "源文件没有变化，退出"
+              exit 0
+          fi
 
-                if (
-                  $0 != "" &&
+
+
+          echo "源文件更新，开始处理"
+
+
+
+          echo "删除注释和空行..."
+
+          sed \
+            's/\r$//' "$SOURCE" |
+          awk '
+          {
+              gsub(/^[ \t]+|[ \t]+$/, "")
+
+              if ($0 != "" &&
                   $0 !~ /^#/ &&
                   $0 !~ /^\/\// &&
-                  $0 !~ /^;/
-                ) {
+                  $0 !~ /^;/)
+              {
                   print
-                }
               }
-            ' > "$CLEAN_FILE"
+          }
+          ' > "$CLEAN"
 
-          # 严格校验 DOMAIN-SET 域名
-awk '
-function valid(line, domain, count, labels, i) {
 
-  if (substr(line,1,1) != ".")
-    return 0
 
-  domain = substr(line,2)
+          TOTAL=$(wc -l < "$CLEAN" | tr -d " ")
 
-  if (length(domain) > 253)
-    return 0
 
-  count = split(domain, labels, ".")
+          echo "有效规则数量: $TOTAL"
 
-  if (count < 2)
-    return 0
 
-  for (i=1; i<=count; i++) {
-
-    if (length(labels[i]) < 1)
-      return 0
-
-    if (length(labels[i]) > 63)
-      return 0
-
-    if (labels[i] !~ /^[A-Za-z0-9-]+$/)
-      return 0
-
-    if (labels[i] ~ /^-/ || labels[i] ~ /-$/)
-      return 0
-  }
-
-  return 1
-}
-
-{
-  if (!valid($0))
-    print NR ":" $0
-}
-' "$CLEAN_FILE" > "$INVALID_FILE"
-
-          if [[ -s "$INVALID_FILE" ]]; then
-            echo "::error::发现无效 DOMAIN-SET 规则"
-            head -n 20 "$INVALID_FILE"
-            exit 1
+          if [ "$TOTAL" -le 50000 ]; then
+              echo "规则数量异常"
+              exit 1
           fi
 
-          TOTAL=$(wc -l < "$CLEAN_FILE" | tr -d " ")
 
-          if (( TOTAL <= 50000 )); then
-            echo "::error::有效规则只有 $TOTAL 条，无法生成两个非空文件"
-            exit 1
+
+          echo "生成第一份 50000 行..."
+
+          head -n 50000 \
+            "$CLEAN" \
+            > "$TMP/anti-ad-1.txt"
+
+
+
+          echo "生成第二份剩余..."
+
+          tail -n +50001 \
+            "$CLEAN" \
+            > "$TMP/anti-ad-2.txt"
+
+
+
+          COUNT1=$(wc -l < "$TMP/anti-ad-1.txt" | tr -d " ")
+          COUNT2=$(wc -l < "$TMP/anti-ad-2.txt" | tr -d " ")
+
+
+
+          echo "第一份: $COUNT1"
+          echo "第二份: $COUNT2"
+
+
+
+          if [ "$COUNT1" != "50000" ]; then
+              echo "第一份数量错误"
+              exit 1
           fi
 
-          if (( TOTAL > 100000 )); then
-            echo "::warning::规则总数为 $TOTAL，第二个文件将超过 50000 条"
+
+          if [ "$COUNT2" -le 0 ]; then
+              echo "第二份为空"
+              exit 1
           fi
 
-          # 第一份固定50000条，第二份为剩余全部
-          head -n 50000 "$CLEAN_FILE" > "$TEMP_DIR/anti-ad-1.txt"
-          tail -n +50001 "$CLEAN_FILE" > "$TEMP_DIR/anti-ad-2.txt"
 
-          PART1=$(wc -l < "$TEMP_DIR/anti-ad-1.txt" | tr -d " ")
-          PART2=$(wc -l < "$TEMP_DIR/anti-ad-2.txt" | tr -d " ")
 
-          if (( PART1 != 50000 || PART2 == 0 )); then
-            echo "::error::拆分结果异常：第一份 $PART1 条，第二份 $PART2 条"
-            exit 1
-          fi
+          echo "替换文件..."
 
-          # 所有检查通过后才覆盖现有文件
-          mkdir -p "$OUTPUT_DIR"
+          mv "$TMP/anti-ad-1.txt" \
+             rules/anti-ad-1.txt
 
-          cp "$TEMP_DIR/anti-ad-1.txt" "$OUTPUT_DIR/.anti-ad-1.txt.tmp"
-          cp "$TEMP_DIR/anti-ad-2.txt" "$OUTPUT_DIR/.anti-ad-2.txt.tmp"
 
-          mv "$OUTPUT_DIR/.anti-ad-1.txt.tmp" \
-             "$OUTPUT_DIR/anti-ad-1.txt"
+          mv "$TMP/anti-ad-2.txt" \
+             rules/anti-ad-2.txt
 
-          mv "$OUTPUT_DIR/.anti-ad-2.txt.tmp" \
-             "$OUTPUT_DIR/anti-ad-2.txt"
 
-          printf '%s\n' "$NEW_HASH" > "$HASH_FILE"
 
-          echo "总规则：$TOTAL"
-          echo "第一份：$PART1"
-          echo "第二份：$PART2"
+          echo "$NEW_HASH" > .anti-ad.sha256
 
-          ls -lh \
-            "$OUTPUT_DIR/anti-ad-1.txt" \
-            "$OUTPUT_DIR/anti-ad-2.txt"
 
-          echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit changes
-        if: steps.update.outputs.changed == 'true'
         shell: bash
         run: |
-          git config user.name "github-actions[bot]"
+
+          git config user.name \
+          "github-actions[bot]"
+
           git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+
 
           git add \
-            "$OUTPUT_DIR/anti-ad-1.txt" \
-            "$OUTPUT_DIR/anti-ad-2.txt" \
-            "$HASH_FILE"
+            rules/anti-ad-1.txt \
+            rules/anti-ad-2.txt \
+            .anti-ad.sha256
+
+
 
           if git diff --cached --quiet; then
-            echo "最终文件没有变化，无需提交"
-            exit 0
+              echo "没有变化"
+              exit 0
           fi
 
-          git commit -m "Update anti-AD split rules"
+
+
+          git commit \
+            -m "Update anti-AD split rules"
+
+
           git push
