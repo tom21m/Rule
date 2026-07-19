@@ -17,7 +17,7 @@ concurrency:
 # 修改源地址、每份行数或输出文件名时，只需调整这里。
 env:
   SOURCE_URL: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMaxNoIP/ChinaMaxNoIP_All_No_Resolve.list"
-  LINES_PER_FILE: "57000"
+  LINES_PER_FILE: "40000"
   OUTPUT_DIR: "."
   OUTPUT_PREFIX: "ChinaMax-"
   OUTPUT_SUFFIX: ".list"
