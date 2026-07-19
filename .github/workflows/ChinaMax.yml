@@ -1,0 +1,195 @@
+name: ChinaMax split rules
+
+on:
+  schedule:
+    # 每天北京时间 04:30
+    - cron: "30 4 * * *"
+      timezone: "Asia/Shanghai"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ChinaMax-update
+  cancel-in-progress: true
+
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+
+      - name: Download and split
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TMP=$(mktemp -d)
+
+          trap 'rm -rf "$TMP"' EXIT
+
+
+          SOURCE="$TMP/source.txt"
+          CLEAN="$TMP/clean.txt"
+
+
+          echo "下载源文件..."
+
+          curl \
+            -L \
+            --fail \
+            --retry 3 \
+            --retry-all-errors \
+            --connect-timeout 20 \
+            --max-time 180 \
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All_No_Resolve.list" \
+            -o "$SOURCE"
+
+
+
+          echo "检查源文件是否变化..."
+
+          NEW_HASH=$(sha256sum "$SOURCE" | awk '{print $1}')
+
+          OLD_HASH=""
+
+          if [ -f .ChinaMax.sha256 ]; then
+              OLD_HASH=$(cat .ChinaMax.sha256)
+          fi
+
+
+          if [ "$NEW_HASH" = "$OLD_HASH" ]; then
+              echo "源文件没有变化，退出"
+              exit 0
+          fi
+
+
+
+          echo "源文件更新，开始处理"
+
+
+
+          echo "删除注释和空行..."
+
+          sed \
+            's/\r$//' "$SOURCE" |
+          awk '
+          {
+              gsub(/^[ \t]+|[ \t]+$/, "")
+
+              if ($0 != "" &&
+                  $0 !~ /^#/ &&
+                  $0 !~ /^\/\// &&
+                  $0 !~ /^;/)
+              {
+                  print
+              }
+          }
+          ' > "$CLEAN"
+
+
+
+          TOTAL=$(wc -l < "$CLEAN" | tr -d " ")
+
+
+          echo "有效规则数量: $TOTAL"
+
+
+          if [ "$TOTAL" -le 50000 ]; then
+              echo "规则数量异常"
+              exit 1
+          fi
+
+
+
+          echo "生成第一份 50000 行..."
+
+          head -n 50000 \
+            "$CLEAN" \
+            > "$TMP/ChinaMax-1.txt"
+
+
+
+          echo "生成第二份剩余..."
+
+          tail -n +50001 \
+            "$CLEAN" \
+            > "$TMP/ChinaMax-2.txt"
+
+
+
+          COUNT1=$(wc -l < "$TMP/ChinaMax-1.txt" | tr -d " ")
+          COUNT2=$(wc -l < "$TMP/ChinaMax-2.txt" | tr -d " ")
+
+
+
+          echo "第一份: $COUNT1"
+          echo "第二份: $COUNT2"
+
+
+
+          if [ "$COUNT1" != "50000" ]; then
+              echo "第一份数量错误"
+              exit 1
+          fi
+
+
+          if [ "$COUNT2" -le 0 ]; then
+              echo "第二份为空"
+              exit 1
+          fi
+
+
+
+          echo "替换文件..."
+
+          mv "$TMP/ChinaMax-1.txt" \
+             ChinaMax-1.txt
+
+
+          mv "$TMP/ChinaMax-2.txt" \
+             ChinaMax-2.txt
+
+
+
+          echo "$NEW_HASH" > .ChinaMax.sha256
+
+
+
+      - name: Commit changes
+        shell: bash
+        run: |
+
+          git config user.name \
+          "github-actions[bot]"
+
+          git config user.email \
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+
+          git add \
+            ChinaMax-1.txt \
+            ChinaMax-2.txt \
+            .ChinaMax.sha256
+
+
+
+          if git diff --cached --quiet; then
+              echo "没有变化"
+              exit 0
+          fi
+
+
+
+          git commit \
+            -m "ChinaMax split rules"
+
+
+          git push
