@@ -52,11 +52,22 @@ nas.redbangshanghai.com
 .xiaojuchefu.cn
 .xiaojukeji.com
 
-# PDD 拼多多
+# 高德
+DOMAIN-SUFFIX,a-map.cn
+DOMAIN-SUFFIX,a-map.co
+DOMAIN-SUFFIX,a-map.link
+DOMAIN-SUFFIX,a-map.vip
+DOMAIN-SUFFIX,amap.com
+DOMAIN-SUFFIX,amapauto.com
+DOMAIN-SUFFIX,anav.com
+DOMAIN-SUFFIX,autonavi.com
+DOMAIN-SUFFIX,gaode.com
+
+# 拼多多
 .pinduoduo.com
 .yangkeduo.com
 
-# XieCheng
+# 携程
 .c-ctrip.com
 .colinker.com
 .ctrip.cn
@@ -87,7 +98,7 @@ nas.redbangshanghai.com
 .tripcdn.com
 .vipdlt.com
 
-# Xiaomi
+# 小米
 .408399.com
 .408399.net
 .816798.net
