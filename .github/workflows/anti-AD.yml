@@ -87,41 +87,45 @@ jobs:
             ' > "$CLEAN_FILE"
 
           # 严格校验 DOMAIN-SET 域名
-          awk '
-            function valid(line, domain, count, labels, i) {
-              if (substr(line, 1, 1) != ".") {
-                return 0
-              }
+awk '
+function valid(line, domain, count, labels, i) {
 
-              domain = substr(line, 2)
+  if (substr(line,1,1) != ".")
+    return 0
 
-              if (length(domain) > 253) {
-                return 0
-              }
+  domain = substr(line,2)
 
-              count = split(domain, labels, ".")
+  if (length(domain) > 253)
+    return 0
 
-              if (count < 2) {
-                return 0
-              }
+  count = split(domain, labels, ".")
 
-              for (i = 1; i <= count; i++) {
-                if (
-                  length(labels[i]) < 1 ||
-                  length(labels[i]) > 63 ||
-                  labels[i] !~ /^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?$/
-                ) {
-                  return 0
-                }
-              }
+  if (count < 2)
+    return 0
 
-              return 1
-            }
+  for (i=1; i<=count; i++) {
 
-            !valid($0) {
-              print NR ":" $0
-            }
-          ' "$CLEAN_FILE" > "$INVALID_FILE"
+    if (length(labels[i]) < 1)
+      return 0
+
+    if (length(labels[i]) > 63)
+      return 0
+
+    if (labels[i] !~ /^[A-Za-z0-9-]+$/)
+      return 0
+
+    if (labels[i] ~ /^-/ || labels[i] ~ /-$/)
+      return 0
+  }
+
+  return 1
+}
+
+{
+  if (!valid($0))
+    print NR ":" $0
+}
+' "$CLEAN_FILE" > "$INVALID_FILE"
 
           if [[ -s "$INVALID_FILE" ]]; then
             echo "::error::发现无效 DOMAIN-SET 规则"
