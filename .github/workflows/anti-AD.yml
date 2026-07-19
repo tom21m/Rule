@@ -1,4 +1,4 @@
-name: anti-AD split rules
+name: SplitRules anti-AD
 
 on:
   schedule:
@@ -189,7 +189,7 @@ jobs:
 
 
           git commit \
-            -m "anti-AD split rules"
+            -m "SplitRules"
 
 
           git push
