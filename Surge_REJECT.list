@@ -598,7 +598,6 @@ DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,assetsconfigcdn.org
 DOMAIN-SUFFIX,prodregistryv2.org
 DOMAIN-SUFFIX,beyondwickedmapping.org
-DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,console.statsigcdn.com
 
 # Sentry
@@ -623,6 +622,7 @@ DOMAIN-SUFFIX,api.saasexch.info
 DOMAIN-SUFFIX,bugsnag.com
 
 # STUN
+PROTOCOL,STUN
 DOMAIN-KEYWORD,stun
 DEST-PORT,3478-3479
 DOMAIN,iphone-stun.strato-iphone.de
