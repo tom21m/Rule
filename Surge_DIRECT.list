@@ -53,15 +53,15 @@ nas.redbangshanghai.com
 .xiaojukeji.com
 
 # 高德
-DOMAIN-SUFFIX,a-map.cn
-DOMAIN-SUFFIX,a-map.co
-DOMAIN-SUFFIX,a-map.link
-DOMAIN-SUFFIX,a-map.vip
-DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,amapauto.com
-DOMAIN-SUFFIX,anav.com
-DOMAIN-SUFFIX,autonavi.com
-DOMAIN-SUFFIX,gaode.com
+.a-map.cn
+.a-map.co
+.a-map.link
+.a-map.vip
+.amap.com
+.amapauto.com
+.anav.com
+.autonavi.com
+.gaode.com
 
 # 拼多多
 .pinduoduo.com
