@@ -923,6 +923,9 @@ DOMAIN-SUFFIX,shuzilm.com
 DOMAIN-SUFFIX,iecosystem.com.cn
 DOMAIN-SUFFIX,marsflag.com.cn
 
+# 充电
+DOMAIN-SUFFIX,ad.luketop.cn
+
 # 饿了么
 DOMAIN-SUFFIX,metis-er.ele.me
 
